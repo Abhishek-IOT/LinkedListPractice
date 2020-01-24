@@ -7,6 +7,11 @@ public class MyLinkedList<E> implements LinkedListADT<E> {
     private static class Node<E> {
         private E data;
         private Node<E> next;
+
+        private Node(E data) {
+            this.data = data;
+            this.next = null;
+        }
     }
 
     public void add(E item) {
