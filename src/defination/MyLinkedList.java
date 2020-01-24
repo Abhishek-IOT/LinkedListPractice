@@ -5,7 +5,8 @@ import adt.LinkedListADT;
 public class MyLinkedList<E> implements LinkedListADT<E> {
     //create the node class
     private static class Node<E> {
-
+        private E data;
+        private Node<E> next;
     }
 
     public void add(E item) {
