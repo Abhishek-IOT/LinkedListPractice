@@ -4,6 +4,7 @@ import adt.LinkedListADT;
 
 public class MyLinkedList<E> implements LinkedListADT<E> {
     private Node<E> Head = null;
+    private int size = 0;
 
     public void add(E item) {
 
