@@ -11,6 +11,10 @@ public class MyLinkedList<E> implements LinkedListADT<E> {
         size++;
     }
 
+    private void addAfter(E data, Node<E> node) {
+
+    }
+
     public void add(E item) {
 
     }
