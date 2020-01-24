@@ -3,32 +3,7 @@ package defination;
 import adt.LinkedListADT;
 
 public class MyLinkedList<E> implements LinkedListADT<E> {
-    //create the node class
-    private static class Node<E> {
-        private E data;
-        private Node<E> next;
-
-        public Node(E data, Node<E> next) {
-            this.data = data;
-            this.next = next;
-        }
-
-        public E getData() {
-            return data;
-        }
-
-
-        public Node<E> getNext() {
-            return next;
-        }
-
-
-
-        private Node(E data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
+    private Node<E> Head = null;
 
     public void add(E item) {
 
@@ -48,5 +23,29 @@ public class MyLinkedList<E> implements LinkedListADT<E> {
 
     public void print() {
 
+    }
+
+    //create the node class
+    private static class Node<E> {
+        private E data;
+        private Node<E> next;
+
+        private Node(E data, Node<E> next) {
+            this.data = data;
+            this.next = next;
+        }
+
+        private Node(E data) {
+            this.data = data;
+            this.next = null;
+        }
+
+        private E getData() {
+            return data;
+        }
+
+        private Node<E> getNext() {
+            return next;
+        }
     }
 }
