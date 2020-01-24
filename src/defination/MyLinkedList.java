@@ -7,7 +7,8 @@ public class MyLinkedList<E> implements LinkedListADT<E> {
     private int size = 0;
 
     private void addFirst(E data) {
-
+        Head = new Node<E>(data, Head);
+        size++;
     }
 
     public void add(E item) {
