@@ -11,14 +11,24 @@ public class MyLinkedList<E> implements LinkedListADT<E> {
         size++;
     }
 
+    private Node<E> getNode(int index) {
+        Node<E> temp = Head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.getNext();
+        }
+        return temp;
+    }
+
+    @Override
+    public void add(E item) {
+
+    }
+
     private void addAfter(E data, Node<E> node) {
         node.next = new Node<E>(data, node.next);
         size++;
     }
 
-    public void add(E item) {
-
-    }
 
     public E remove(E item) {
         return null;
@@ -33,6 +43,11 @@ public class MyLinkedList<E> implements LinkedListADT<E> {
     }
 
     public void print() {
+        Node<E> temp = Head;
+        while (temp.next != null) {
+            System.out.println(temp);
+            temp = temp.next;
+        }
 
     }
 
@@ -57,6 +72,15 @@ public class MyLinkedList<E> implements LinkedListADT<E> {
 
         private Node<E> getNext() {
             return next;
+        }
+
+        @Override
+        public String toString() {
+            final StringBuffer sb = new StringBuffer("Node{");
+            sb.append("data=").append(data);
+            sb.append(", next=").append(next);
+            sb.append('}');
+            return sb.toString();
         }
     }
 }
